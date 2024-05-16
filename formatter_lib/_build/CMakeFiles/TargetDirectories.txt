@@ -1,0 +1,3 @@
+/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib/_build/CMakeFiles/formatter_lib.dir
+/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib/_build/CMakeFiles/edit_cache.dir
+/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib/_build/CMakeFiles/rebuild_cache.dir
