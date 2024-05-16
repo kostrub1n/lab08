@@ -222,6 +222,24 @@ formatter_ex_IS_TOP_LEVEL:STATIC=OFF
 formatter_ex_SOURCE_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_ex_lib
 
 //Value Computed by CMake
+formatter_ex_lib_BINARY_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build/formatter_ex_lib
+
+//Value Computed by CMake
+formatter_ex_lib_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+formatter_ex_lib_SOURCE_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_ex_lib
+
+//Value Computed by CMake
+formatter_lib_BINARY_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build/formatter_ex_lib/formatter_lib
+
+//Value Computed by CMake
+formatter_lib_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+formatter_lib_SOURCE_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib
+
+//Value Computed by CMake
 hello_world_BINARY_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build
 
 //Value Computed by CMake
@@ -335,7 +353,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

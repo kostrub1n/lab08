@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.25) # Проверка версии CMake.
+									 # Если версия установленой программы
+									 # старее указаной, произайдёт аварийный выход.
 
 project(hello_world)				 # Название проекта
 
@@ -10,4 +12,4 @@ add_executable(main ${SOURCE_EXE})	 # Создает исполняемый фа
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib/ formatter_ex_lib)
 
-target_link_libraries(main formatter_ex_lib)
+target_link_libraries(main formatter_ex_lib)		 # Линковка программы с библиотекой

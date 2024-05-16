@@ -117,25 +117,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-formatter_ex_lib/CMakeFiles/formatter_ex.dir/rule:
-	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter_ex_lib/CMakeFiles/formatter_ex.dir/rule
-.PHONY : formatter_ex_lib/CMakeFiles/formatter_ex.dir/rule
+formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/rule:
+	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/rule
+.PHONY : formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/rule
 
 # Convenience name for target.
-formatter_ex: formatter_ex_lib/CMakeFiles/formatter_ex.dir/rule
-.PHONY : formatter_ex
+formatter_ex_lib: formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/rule
+.PHONY : formatter_ex_lib
 
 # fast build rule for target.
-formatter_ex/fast:
-	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/build
-.PHONY : formatter_ex/fast
+formatter_ex_lib/fast:
+	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build
+.PHONY : formatter_ex_lib/fast
 
 formatter_ex.o: formatter_ex.cpp.o
 .PHONY : formatter_ex.o
 
 # target to build an object file
 formatter_ex.cpp.o:
-	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/formatter_ex.cpp.o
+	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/formatter_ex.cpp.o
 .PHONY : formatter_ex.cpp.o
 
 formatter_ex.i: formatter_ex.cpp.i
@@ -143,7 +143,7 @@ formatter_ex.i: formatter_ex.cpp.i
 
 # target to preprocess a source file
 formatter_ex.cpp.i:
-	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/formatter_ex.cpp.i
+	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/formatter_ex.cpp.i
 .PHONY : formatter_ex.cpp.i
 
 formatter_ex.s: formatter_ex.cpp.s
@@ -151,7 +151,7 @@ formatter_ex.s: formatter_ex.cpp.s
 
 # target to generate assembly for a file
 formatter_ex.cpp.s:
-	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/formatter_ex.cpp.s
+	cd /home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/_build && $(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/formatter_ex.cpp.s
 .PHONY : formatter_ex.cpp.s
 
 # Help Target
@@ -162,7 +162,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... formatter_ex"
+	@echo "... formatter_ex_lib"
 	@echo "... formatter_ex.o"
 	@echo "... formatter_ex.i"
 	@echo "... formatter_ex.s"

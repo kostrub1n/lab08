@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/debain/kostrub1n/workspace/projects/lab03/formatter_ex_lib/CMakeLists.txt"
+  "/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib/CMakeLists.txt"
   "/home/debain/kostrub1n/workspace/projects/lab03/hello_world_application/CMakeLists.txt"
   "CMakeFiles/3.25.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
@@ -41,10 +42,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "formatter_ex_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "formatter_ex_lib/formatter_lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
-  "formatter_ex_lib/CMakeFiles/formatter_ex.dir/DependInfo.cmake"
+  "formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/DependInfo.cmake"
+  "formatter_ex_lib/formatter_lib/CMakeFiles/formatter_lib.dir/DependInfo.cmake"
   )

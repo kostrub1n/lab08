@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=formatter_ex
+CMAKE_PROJECT_NAME:STATIC=formatter_ex_lib
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -220,6 +220,24 @@ formatter_ex_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 formatter_ex_SOURCE_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_ex_lib
+
+//Value Computed by CMake
+formatter_ex_lib_BINARY_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_ex_lib/_build
+
+//Value Computed by CMake
+formatter_ex_lib_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+formatter_ex_lib_SOURCE_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_ex_lib
+
+//Value Computed by CMake
+formatter_lib_BINARY_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_ex_lib/_build/formatter_lib
+
+//Value Computed by CMake
+formatter_lib_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+formatter_lib_SOURCE_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib
 
 
 ########################
@@ -326,7 +344,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -1,24 +1,14 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(formatter_ex)
+project(formatter_ex_lib)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(SOURCE_LIB formatter_ex.cpp)
 
-# Установим путь к директории formatter_ex_lib
-set(CMAKE_CURRENT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib)
+add_library(formatter_ex_lib STATIC ${SOURCE_LIB})
 
-# Явно перечислим исходные файлы
-set(SOURCES
-    formatter_ex.cpp
-)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib formatter_lib)
 
-# Создадим библиотеку formatter_ex
-add_library(formatter_ex STATIC ${SOURCES})
-
-# Установим директорию для поиска заголовочных файлов
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/formatter_lib)
-
-# Добавим зависимость от библиотеки formatter
-target_link_libraries(formatter_ex formatter)
+target_link_libraries(formatter_ex_lib PUBLIC formatter_lib)
+target_include_directories(formatter_ex_lib PUBLIC
+				"${CMAKE_CURRENT_SOURCE_DIR}"
+				"${CMAKE_CURRENT_SOURCE_DIR}/../formatter_lib")

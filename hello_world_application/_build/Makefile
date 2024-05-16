@@ -130,17 +130,30 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named formatter_ex
+# Target rules for targets named formatter_ex_lib
 
 # Build rule for target.
-formatter_ex: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter_ex
-.PHONY : formatter_ex
+formatter_ex_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter_ex_lib
+.PHONY : formatter_ex_lib
 
 # fast build rule for target.
-formatter_ex/fast:
-	$(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex.dir/build
-.PHONY : formatter_ex/fast
+formatter_ex_lib/fast:
+	$(MAKE) $(MAKESILENT) -f formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build.make formatter_ex_lib/CMakeFiles/formatter_ex_lib.dir/build
+.PHONY : formatter_ex_lib/fast
+
+#=============================================================================
+# Target rules for targets named formatter_lib
+
+# Build rule for target.
+formatter_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 formatter_lib
+.PHONY : formatter_lib
+
+# fast build rule for target.
+formatter_lib/fast:
+	$(MAKE) $(MAKESILENT) -f formatter_ex_lib/formatter_lib/CMakeFiles/formatter_lib.dir/build.make formatter_ex_lib/formatter_lib/CMakeFiles/formatter_lib.dir/build
+.PHONY : formatter_lib/fast
 
 hello_world.o: hello_world.cpp.o
 .PHONY : hello_world.o
@@ -174,7 +187,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... formatter_ex"
+	@echo "... formatter_ex_lib"
+	@echo "... formatter_lib"
 	@echo "... main"
 	@echo "... hello_world.o"
 	@echo "... hello_world.i"

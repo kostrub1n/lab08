@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=formatter
+CMAKE_PROJECT_NAME:STATIC=formatter_lib
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -220,6 +220,15 @@ formatter_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 formatter_SOURCE_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib
+
+//Value Computed by CMake
+formatter_lib_BINARY_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib/_build
+
+//Value Computed by CMake
+formatter_lib_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+formatter_lib_SOURCE_DIR:STATIC=/home/debain/kostrub1n/workspace/projects/lab03/formatter_lib
 
 
 ########################
