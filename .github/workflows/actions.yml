@@ -1,47 +1,27 @@
-name: Lab
-on: push
-jobs:
-    build-project:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
-            - name: formater_lib
-              run: |
-                cd ${{ github.workspace }}/formatter_lib/
-                rm -rf build
-                mkdir build && cd build
-                cmake ..
-                cmake --build .
+cmake_minimum_required(VERSION 3.25)
 
-            - name: formater_ex_lib
-              run: |
-                cd ${{ github.workspace }}/formatter_ex_lib/
-                rm -rf build
-                mkdir build && cd build
-                cmake ..
-                cmake --build .
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-            - name: hello_world
-              run: |
-                cd ${{ github.workspace }}/hello_world_application/
-                rm -rf build
-                mkdir build && cd build
-                cmake ..
-                cmake --build .
+option(BUILD_TESTS "Build tests" OFF)
 
-            - name: solver_lib
-              run: |
-                cd ${{ github.workspace }}/solver_lib/
-                rm -rf build
-                mkdir build && cd build
-                cmake ..
-                cmake --build .
+if(BUILD_TESTS)                   
+  add_compile_options(--coverage) 
+endif()
 
-            - name: solver_application
-              run: |
-                cd ${{ github.workspace }}/solver_application/
-                rm -rf build
-                mkdir build && cd build
-                cmake ..
-                cmake --build .
+project (banking)
+
+add_library(banking STATIC ${CMAKE_CURRENT_SOURCE_DIR}/banking/Transaction.cpp ${CMAKE_CURRENT_SOURCE_DIR}/banking/Account.cpp)
+target_include_directories(banking PUBLIC
+${CMAKE_CURRENT_SOURCE_DIR}/banking )
+
+target_link_libraries(banking gcov)
+
+if(BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(third-party/gtest)
+  file(GLOB BANKING_TEST_SOURCES tests/*.cpp)
+  add_executable(check ${BANKING_TEST_SOURCES})
+  target_link_libraries(check banking gtest_main)
+  add_test(NAME check COMMAND check)
+endif()
