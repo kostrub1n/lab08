@@ -1,5 +1,4 @@
-## Homework
-
+#LAB8
 # Dockerfile
 ```
 FROM ubuntu:20.04
@@ -22,18 +21,18 @@ CMD ["./build/message_writer"]
 
 # CMakeLists.txt
 ```
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15)
 
-project(MessageWriter)
+project(logger)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-add_executable(message_writer main.cpp)
+add_executable(message_writer logger.cpp)
 ```
 # actions.yml
 ```
-name: Build and Run Docker
+name: Build
 
 on: [push]
 
@@ -56,9 +55,4 @@ jobs:
 
     - name: Display output file
       run: cat ./output.txt
-```
-# Сборка докера на локальной машине
-```
-$ docker build -t message-writer .
-$ docker run -t message-writer
 ```
