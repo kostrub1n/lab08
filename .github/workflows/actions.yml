@@ -13,11 +13,8 @@ jobs:
     - name: Build Docker image
       run: docker build -t message-writer .
 
-    - name: Run Docker container
-      run: docker run --name message-writer-container message-writer
-
-    - name: Copy output file
-      run: docker cp message-writer-container:/usr/src/app/output.txt ./output.txt
+    - name: Run Docker container with volume
+      run: docker run --name message-writer-container -v $(pwd)/output:/usr/src/app/output message-writer
 
     - name: Display output file
-      run: cat ./output.txt
+      run: cat ./output/output.txt
