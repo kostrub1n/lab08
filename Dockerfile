@@ -9,8 +9,6 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN mkdir build
-
-RUN cd build && cmake .. && make
+RUN cmake -H. -B build && cmake --build build
 
 CMD ["./build/logger"]
